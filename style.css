@@ -1,0 +1,33 @@
+body {
+  color: rgb(151, 151, 151);
+  background-color: beige;
+}
+
+button {
+  background-color: rgb(245, 183, 193);
+  border: 1px solid #6965da;
+  padding: 2px;
+  margin: 3px;
+}
+
+input {
+  padding: 2px;
+  border: 1px solid rgb(245, 183, 193);
+}
+
+h1 {
+  color: #6965da;
+}
+
+h2 {
+  color: #9491e4;
+}
+
+nav li {
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

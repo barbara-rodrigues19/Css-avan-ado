@@ -1,0 +1,47 @@
+$cor-primaria: rgb(245, 183, 193);
+$cor-secundaria:#9491e4;
+$cor-terciaria: beige;
+$cor-quartenaria: rgb(151, 151, 151);
+$cor-cinco: #6965da;
+$tamanho-campos: 2px;
+
+
+
+body {
+    color: $cor-quartenaria;
+    background-color: $cor-terciaria;
+}
+
+button {
+       background-color: $cor-primaria;
+       border: 1px solid $cor-cinco;
+       padding: $tamanho-campos;
+       margin: 3px;
+
+}
+input {
+    padding: $tamanho-campos;
+    border: 1px solid $cor-primaria;
+}
+
+h1 {
+    color:$cor-cinco;
+}
+h2 {
+    color: $cor-secundaria;
+}
+
+nav {
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+}
+
+
+
