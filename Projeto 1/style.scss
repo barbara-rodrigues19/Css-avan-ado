@@ -1,0 +1,51 @@
+.display-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav {
+@extend .display-flex;
+    img {
+        height: 70px;
+        width: 70px;
+    }
+
+ul {
+    @extend .display-flex;
+}
+
+
+    li {
+        list-style: none;
+        padding: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: salmon;
+    }
+}
+
+main {
+    background-image: url("https://i.pinimg.com/originals/30/3b/2e/303b2e0480a20ea33846303da27576fe.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main input, main button {
+    padding: 15px;
+    border-color: purple;
+    color: white;
+    border-radius: 5px;
+  }
+
+  button{
+    background-color: purple;
+  }
