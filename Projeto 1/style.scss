@@ -1,18 +1,22 @@
-.display-flex {
+$cor-primaria: white;
+$cor-secundaria: purple;
+$cor-terciaria: salmon;
+
+@mixin display-flex($diretion, $justify) {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: $diretion;
+    justify-content: $justify;
 }
 
 nav {
-@extend .display-flex;
+@include display-flex(row,space-around);
     img {
         height: 70px;
         width: 70px;
     }
 
 ul {
-    @extend .display-flex;
+    @include display-flex(row,space-around);
 }
 
 
@@ -23,7 +27,7 @@ ul {
 
     a {
         text-decoration: none;
-        color: salmon;
+        color: $cor-terciaria;
     }
 }
 
@@ -37,15 +41,17 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: $cor-primaria;
+    @include display-flex(column,center);
 }
 
 main input, main button {
     padding: 15px;
-    border-color: purple;
-    color: white;
-    border-radius: 5px;
+    border-color: $cor-secundaria;
+    color: $cor-primaria;
+    border-radius: 10px;
   }
 
   button{
-    background-color: purple;
+    background-color: $cor-secundaria;
   }
