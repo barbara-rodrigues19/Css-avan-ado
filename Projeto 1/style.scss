@@ -1,5 +1,5 @@
 $cor-primaria: white;
-$cor-secundaria: purple;
+$cor-secundaria: orangered;
 $cor-terciaria: salmon;
 
 @mixin display-flex($diretion, $justify) {
@@ -9,15 +9,16 @@ $cor-terciaria: salmon;
 }
 
 nav {
-@include display-flex(row,space-around);
+    @include display-flex(row, space-around);
+
     img {
         height: 70px;
         width: 70px;
     }
 
-ul {
-    @include display-flex(row,space-around);
-}
+    ul {
+        @include display-flex(row, space-around);
+    }
 
 
     li {
@@ -42,16 +43,103 @@ main {
     flex-direction: column;
     justify-content: center;
     color: $cor-primaria;
-    @include display-flex(column,center);
+    @include display-flex(column, center);
 }
 
-main input, main button {
+main input,
+main button {
     padding: 15px;
     border-color: $cor-secundaria;
     color: $cor-primaria;
-    border-radius: 10px;
-  }
+    border-radius: 15px;
+}
 
-  button{
+button {
     background-color: $cor-secundaria;
-  }
+}
+
+.ultimo-conteudo-adc {
+    @include display-flex(column, center);
+
+    h2 {
+        text-align: center;
+        color: $cor-secundaria;
+    }
+
+    table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+
+
+
+        .linha {
+            border-bottom: 1px solid black;
+            padding: 10px
+        }
+
+        th {
+            @extend .linha;
+            color: $cor-secundaria;
+        }
+
+        td {
+            @extend .linha;
+            color: black;
+        }
+
+
+        .Assunto {
+            display: flex;
+            justify-content: center;
+
+
+            @mixin assuntoLivro ($corFundo) {
+                background-color: $corFundo;
+                max-width: 80%;
+                color: white;
+                text-transform: uppercase;
+            }
+
+            .assuntoLivro {
+                @include assuntoLivro (#eca47d);
+            }
+
+
+        }
+
+        .score {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .like {
+                color: green;
+            }
+
+            .dislike {
+                color: red;
+            }
+
+            .star {
+                color: goldenrod;
+            }
+        }
+
+    }
+
+    .botao {
+        @include display-flex(row, center);
+
+        button {
+            padding: 15px;
+            background-color: white;
+            border: 1px solid $cor-terciaria;
+            color: $cor-secundaria;
+            border-radius: 10px;
+            text-transform: uppercase;
+            width: 20%;
+        }
+    }
+}

@@ -37,13 +37,78 @@ main {
   justify-content: center;
 }
 
-main input, main button {
+main input,
+main button {
   padding: 15px;
-  border-color: purple;
+  border-color: orangered;
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 button {
-  background-color: purple;
+  background-color: orangered;
+}
+
+.ultimo-conteudo-adc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ultimo-conteudo-adc h2 {
+  text-align: center;
+  color: orangered;
+}
+.ultimo-conteudo-adc table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.ultimo-conteudo-adc table .linha, .ultimo-conteudo-adc table td, .ultimo-conteudo-adc table th {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+.ultimo-conteudo-adc table th {
+  color: orangered;
+}
+.ultimo-conteudo-adc table td {
+  color: black;
+}
+.ultimo-conteudo-adc table .Assunto {
+  display: flex;
+  justify-content: center;
+}
+.ultimo-conteudo-adc table .Assunto .assuntoLivro {
+  background-color: #eca47d;
+  max-width: 80%;
+  color: white;
+  text-transform: uppercase;
+}
+.ultimo-conteudo-adc table .score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.ultimo-conteudo-adc table .score .like {
+  color: green;
+}
+.ultimo-conteudo-adc table .score .dislike {
+  color: red;
+}
+.ultimo-conteudo-adc table .score .star {
+  color: goldenrod;
+}
+.ultimo-conteudo-adc .botao {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.ultimo-conteudo-adc .botao button {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid salmon;
+  color: orangered;
+  border-radius: 10px;
+  text-transform: uppercase;
+  width: 20%;
 }
