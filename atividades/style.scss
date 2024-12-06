@@ -105,3 +105,40 @@ body {
         @include card (pink, 10px, 5px)
     }
 }
+
+.loop {
+    $tamanhoTela: 12;
+
+@for $i from 1 through $tamanhoTela {
+    .col-#{$i}{
+        width: calc(100% / $tamanhoTela) * $i;
+    }
+}
+
+div {
+    height: 50px;
+    background-color: grey;
+    border: 2px solid white
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+}
+
+.animacoes  {
+    button {
+        background-color: rgb(167, 167, 255);
+        transition: background-color 1s ease;
+        padding: 5px;
+    }
+
+    button:hover {
+        background-color: brown;
+        transform: scale(1.5);
+    }
+}
+
